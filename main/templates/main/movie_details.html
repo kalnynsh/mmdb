@@ -2,5 +2,15 @@
 {% load staticfiles %}
 
 {% block content %}
-
+<h2>{{ object.title }}</h2>
+<p>{{ object.description }}</p>
+<h3>User Reviews</h3>
+<ul>
+    {% for review in object.review.all %}
+    <li>{{ review.review }} by {{ review.user_name }}</li>
+    {% endfor %}
+</ul>
+<a href="{% url 'new-review' movie_pk=object.pk %}">
+    Submit New Review
+</a>
 {% endblock %}
