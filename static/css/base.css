@@ -1,0 +1,4 @@
+{% load staticfiles %}
+
+{% block extra_css %}
+{% endblock %}
