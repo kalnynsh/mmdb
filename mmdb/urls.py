@@ -16,6 +16,15 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
+from main.views import MovieDetailsView
+from main.views import MovieListView
+from main.views import NewReviewView
+
+
 urlpatterns = [
+    url(r'^$', MovieListView.as_view(), name='movie-list'),
+    url(r'^movie/(?P<pk>\d+)/$', MovieDetailsView.as_view(), name='movie-details'),
+    url(r'^movie/(?P<movie_pk>\d+)/review/$', NewReviewView.as_view(), name='new-review'),
+
     url(r'^admin/', admin.site.urls),
 ]
