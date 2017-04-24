@@ -41,9 +41,4 @@ class NewReviewView(CreateView):
         review.movie = movie
         review.save()
 
-        return HttpResponseRedirect(reverse('movie-details'), kwargs={'pk': movie_pk})
-
-
-
-
-
+        return HttpResponseRedirect(reverse('movie-details', kwargs={'pk': movie_pk}))

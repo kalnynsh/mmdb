@@ -22,7 +22,7 @@ from main.views import NewReviewView
 
 
 urlpatterns = [
-    url(r'^$', MovieListView.as_view(), name='movie-list'),
+    url(r'^$', MovieListView.as_view(), name='movies-list'),
     url(r'^movie/(?P<pk>\d+)/$', MovieDetailsView.as_view(), name='movie-details'),
     url(r'^movie/(?P<movie_pk>\d+)/review/$', NewReviewView.as_view(), name='new-review'),
 
