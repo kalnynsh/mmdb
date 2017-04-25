@@ -111,8 +111,8 @@ AUTH_PASSWORD_VALIDATORS = [
 LANGUAGE_CODE = 'en-us'
 
 LANGUAGES = (
-    ('en', 'English',
-     'fr', 'French')
+    ('en', 'English'),
+    ('fr', 'French')
 )
 
 TIME_ZONE = 'Europe/Moscow'
