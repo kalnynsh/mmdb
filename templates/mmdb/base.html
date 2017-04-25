@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load staticfiles %}
+{% load i18n %}
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -27,6 +28,16 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-left">
             <li><a href="{% url 'movies-list' %}">Home</a></li>
+          </ul>
+        <div id="navbar" class="navbar-collapse collapse">
+          <span>Select Language</span>
+          <ul class="nav navbar-nav navbar-left">
+              {% get_available_languages as available_languages %}
+              {% for lang_code, lang_name in available_languages %}
+              {% language lang_code %}
+                <li><a href="{% url 'movies-list' %}">{{ lang_name }}</a></li>
+              {% endlanguage %}
+              {% endfor %}
           </ul>
         </div>
     </div>
