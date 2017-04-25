@@ -1,8 +1,9 @@
 {% extends "mmdb/base.html" %}
 {% load staticfiles %}
+{% load i18n %}
 
 {% block content %}
-<h2>Movies List</h2>
+<h2>{% trans "Movies List" %}</h2>
 
 <ul>
     {% for movie in object_list %}
