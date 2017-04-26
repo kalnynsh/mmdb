@@ -8,7 +8,7 @@
 <ul>
     {% for movie in object_list %}
     <li><a href="{% url 'movie-details' pk=movie.pk %}">
-        {{ movie.title }} | {{ movie.stars }} {% trans "Stars" %}
+        {{ movie.get_title }} | {{ movie.stars }} {% trans "Stars" %}
     </a></li>
     {% endfor %}
 </ul>
