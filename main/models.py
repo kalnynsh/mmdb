@@ -3,8 +3,12 @@ from django.db import models
 
 class MovieDetails(models.Model):
     title = models.CharField(max_length=255)
+    title_fr = models.CharField(max_length=255)
+
     description = models.TextField()
-    stars = models.PositiveIntegerField()
+    description_fr = models.TextField()
+
+    stars = models.PositiveSmallIntegerField()
 
     def __str__(self):
         return self.title
