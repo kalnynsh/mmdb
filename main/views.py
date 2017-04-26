@@ -3,6 +3,8 @@ from django.http.response import HttpResponseRedirect
 from django.views.generic import CreateView
 from django.views.generic import DetailView
 from django.views.generic import ListView
+from django.utils.translation import LANGUAGE_SESSION_KEY
+from django.utils.translation import get_language
 
 from main.models import MovieDetails
 from main.models import MovieReview
@@ -11,6 +13,12 @@ from main.models import MovieReview
 class MovieListView(ListView):
     model = MovieDetails
     template_name = "main/movies_list.html"
+
+    def get(self, request, *args, **kwargs):
+        current_language = get_language()
+        request.session[LANGUAGE_SESSION_KEY] = current_language
+
+        return super(MovieListView, self).get(request, *args, **kwargs)
 
 
 class MovieDetailsView(DetailView):
