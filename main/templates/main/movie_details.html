@@ -7,7 +7,7 @@
 <h3>User Reviews</h3>
 <ul>
     {% for review in object.reviews.all %}
-    <li>{{ review.review }} by {{ review.user_name }}</li>
+    <li>{{ review.review }} by <i>{{ review.user_name }}</i></li>
     {% endfor %}
 </ul>
 <a href="{% url 'new-review' movie_pk=object.pk %}">
