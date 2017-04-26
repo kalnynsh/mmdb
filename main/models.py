@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.translation import get_language
 
 
 class MovieDetails(models.Model):
@@ -9,6 +10,26 @@ class MovieDetails(models.Model):
     description_fr = models.TextField()
 
     stars = models.PositiveSmallIntegerField()
+
+    def get_title(self):
+        return self._get_translated_field('title')
+
+    def get_description(self):
+        return self._get_translated_field('description')
+
+    def _get_translated_field(self, field_name):
+        original_field_name = field_name
+
+        lang_code = get_language()
+
+        if lang_code != 'en':
+            field_name = '{}_{}'.format(field_name, lang_code)
+        field_value = getattr(self, field_name)
+
+        if field_value:
+            return field_value
+        else:
+            return getattr(self, original_field_name)
 
     def __str__(self):
         return self.title
