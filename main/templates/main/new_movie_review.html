@@ -1,12 +1,13 @@
 {% extends "mmdb/base.html" %}
 {% load staticfiles %}
+{% load i18n %}
 
 {% block content %}
-<h2>Submit New Review for {{ movie.title }}</h2>
+<h2>{% trans "Submit New Review" %} for {{ movie.title }}</h2>
 
 <form action="" method="post" class="form">
     {% csrf_token %}
     {{ form.as_p }}
-    <input class="btn btn-success" type="submit" value="Submit Review">
+    <input class="btn btn-success" type="submit" value="{% trans 'Submit Review' %}">
 </form>
 {% endblock %}

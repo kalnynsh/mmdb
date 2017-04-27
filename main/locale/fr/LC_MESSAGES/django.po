@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-27 16:40+0300\n"
+"POT-Creation-Date: 2017-04-27 16:52+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,6 +23,7 @@ msgid "User Reviews"
 msgstr "Critiques d'utilisateurs"
 
 #: main/templates/main/movie_details.html:15
+#: main/templates/main/new_movie_review.html:6
 msgid "Submit New Review"
 msgstr "Soumettre une nouvelle critique"
 
@@ -33,3 +34,9 @@ msgstr "Liste des films"
 #: main/templates/main/movies_list.html:11
 msgid "Stars"
 msgstr "Étoile"
+
+#: main/templates/main/new_movie_review.html:11
+#, fuzzy
+#| msgid "Submit New Review"
+msgid "Submit Review"
+msgstr "Poster le critique"
