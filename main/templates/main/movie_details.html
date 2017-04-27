@@ -3,8 +3,8 @@
 {% load i18n %}
 
 {% block content %}
-<h2>{{ object.title }}</h2>
-<p>{{ object.description }}</p>
+<h2>{{ object.get_title }}</h2>
+<p>{{ object.get_description }}</p>
 <h3>{% trans "User Reviews" %}</h3>
 <ul>
     {% for review in object.reviews.all %}
