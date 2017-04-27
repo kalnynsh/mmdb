@@ -1,0 +1,9 @@
+log/
+
+.gitignor
+
+__pycache__/
+
+*.cpython*
+
+.idea/
