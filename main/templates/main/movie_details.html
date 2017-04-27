@@ -12,6 +12,6 @@
     {% endfor %}
 </ul>
 <a href="{% url 'new-review' movie_pk=object.pk %}">
-    Submit New Review
+    {% trans "Submit New Review" %}
 </a>
 {% endblock %}

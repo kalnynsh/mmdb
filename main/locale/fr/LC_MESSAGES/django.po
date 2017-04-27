@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-27 16:19+0300\n"
+"POT-Creation-Date: 2017-04-27 16:40+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,9 +18,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: main/templates/main/movie_details.html:7
+#: main/templates/main/movie_details.html:8
 msgid "User Reviews"
 msgstr "Critiques d'utilisateurs"
+
+#: main/templates/main/movie_details.html:15
+msgid "Submit New Review"
+msgstr "Soumettre une nouvelle critique"
 
 #: main/templates/main/movies_list.html:6
 msgid "Movies List"
