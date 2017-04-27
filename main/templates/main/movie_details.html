@@ -4,7 +4,7 @@
 {% block content %}
 <h2>{{ object.title }}</h2>
 <p>{{ object.description }}</p>
-<h3>User Reviews</h3>
+<h3>{% trans "User Reviews" %}</h3>
 <ul>
     {% for review in object.reviews.all %}
     <li>{{ review.review }} by <i>{{ review.user_name }}</i></li>
